@@ -9,12 +9,20 @@ describe Bank do
       bank.deposit(10)
       expect(bank.transaction_history.length).to eq(1)
     end
+
+    it 'throws an error if a number is not entered' do
+      expect { bank.deposit('potatoes') }.to raise_error('Number not entered')
+    end
   end
 
   describe '#withdraw' do
     it 'deposit creates a withdrawal transaction' do
       bank.withdraw(10)
       expect(bank.transaction_history.length).to eq(1)
+    end
+
+    it 'throws an error if a number is not entered' do
+      expect { bank.withdraw('potatoes') }.to raise_error('Number not entered')
     end
   end
 

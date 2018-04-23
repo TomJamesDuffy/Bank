@@ -18,10 +18,10 @@ describe Statement do
 
   describe '#print_transactions' do
     it 'prints the date, time and amount of each transaction' do
-      expect{ statement.print_transactions(dummy_bank.transaction_history) }
+      expect { statement.print_transactions(dummy_bank.transaction_history) }
         .to output("date || credit || debit || balance\n"\
                "19/11/1990 || 0 || 30 || 30\n"\
-               "19/11/1990 || 0 || 30 || 60").to_stdout
+               '19/11/1990 || 0 || 30 || 60').to_stdout
     end
   end
 end

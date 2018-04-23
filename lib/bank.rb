@@ -9,10 +9,12 @@ class Bank
   end
 
   def deposit(amount)
+    raise 'Number not entered' unless amount.is_a?(Numeric)
     @transaction_history.push(Transaction.new(amount))
   end
 
   def withdraw(amount)
+    raise 'Number not entered' unless amount.is_a?(Numeric)
     @transaction_history.push(Transaction.new(-amount))
   end
 
