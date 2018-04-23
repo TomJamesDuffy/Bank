@@ -15,4 +15,8 @@ class Bank
   def withdraw(amount)
     @transaction_history.push(Transaction.new(-amount))
   end
+
+  def balance
+    @transaction_history.reduce(0) { |initial, t| initial + t.amount }
+  end
 end

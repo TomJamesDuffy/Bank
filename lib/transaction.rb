@@ -1,5 +1,8 @@
 # Stores details of individual transactions.
 class Transaction
-  def initialize(amount) 
+  attr_reader :amount
+
+  def initialize(amount)
+    @amount = amount
   end
 end
