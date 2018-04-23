@@ -9,8 +9,6 @@ class Statement
   end
 
   def self.balance(transaction_history, pos)
-    transaction_history[0..pos].reduce(0) do |initial, t|
-      initial + t.amount
-    end.to_s
+    '%.2f' % transaction_history[0..pos].reduce(0) { |initial, t| initial + t.amount }
   end
 end

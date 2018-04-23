@@ -1,7 +1,7 @@
-require_relative '../lib/bank.rb'
+require_relative '../lib/bank_account.rb'
 
-describe Bank do
-  subject(:bank) { Bank.new }
+describe BankAccount do
+  subject(:bank) { BankAccount.new }
   let(:dummy_transaction) { double :transaction }
 
   describe '#deposit' do

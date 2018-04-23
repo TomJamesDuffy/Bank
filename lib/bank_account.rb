@@ -1,7 +1,7 @@
 require_relative 'transaction.rb'
 
 # Bank enables withdrawal, deposits and balance checking.
-class Bank
+class BankAccount
   attr_reader :transaction_history
 
   def initialize

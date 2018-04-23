@@ -9,10 +9,22 @@ This is the first practice tech test set during the tenth week of Makers Academy
 
 ### Setup
 
-Run bundle install
-Run rspec to confirm tests are working
+1.) Run bundle install  
+2.) Run RSpec to confirm tests are working
+
+### Approach
+
+The first step I took was to try and frame the problem as a diagram (see above). I then tried to tackle the aspects of the program that were most important from the users point of view. That is, having the ability to withdraw and deposit from their bank. Followed by the ability to view the balance. These segments were test driven.
 
 ### How to use
+
+The two main classes are the bank class and the statement class.
+
+The BankAccount class enables you to `withdraw`, `deposit` and see your `balance`.    
+You can also call your transaction history in the form of an array using `bank.transaction_history`  
+The statement class enables you to print a given transaction history.   
+
+`Statement.print(bank.transaction_history)`
 
 ### Requirements
 
