@@ -100,7 +100,6 @@
         null,
         null,
         null,
-        null,
         null
       ],
       "/Users/thomasduffy/Documents/Programming/Learning/Makers Academy/TechTestWeek/BankTechTestPractice/lib/statement.rb": [
@@ -109,10 +108,10 @@
         1,
         1,
         1,
+        1,
         null,
         null,
         1,
-        null,
         null,
         null,
         1,
@@ -123,6 +122,6 @@
         null
       ]
     },
-    "timestamp": 1524486699
+    "timestamp": 1524487407
   }
 }

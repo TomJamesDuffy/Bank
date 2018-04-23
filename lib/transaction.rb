@@ -13,6 +13,6 @@ class Transaction
   private
 
   def assign
-    @amount > 0 ? (@debit = @amount.to_f.to_s) : (@credit = -@amount.to_f.to_s)
+    @amount > 0 ? (@debit = @amount.to_f.to_s) : (@credit = @amount.to_f.to_s)
   end
 end
