@@ -1,5 +1,5 @@
-# Week 10 Makers Academy
-This is the first practice tech test set during the tenth week of Makers Academy.
+# Week 10 Makers Academy - Bank Tech Test
+This is the first practice tech test set during the tenth week of Makers Academy. This program is a simple banking program.
 
 ## Specification
 
@@ -14,7 +14,7 @@ This is the first practice tech test set during the tenth week of Makers Academy
 
 ### Approach
 
-The first step I took was to try and frame the problem as a diagram (see above). I then tried to tackle the aspects of the program that were most important from the users point of view. That is, having the ability to withdraw and deposit from their bank. Followed by the ability to view the balance. These segments were test driven.
+The first step I took was to try and frame the problem as a diagram (see above). I then to tackled the aspects of the program that were most important from the users point of view. That is, having the ability to withdraw and deposit from their bank. Followed by the ability to view the balance. These segments were test driven. I then moved onto the other elements of the program such as storing the data in a transaction object and printing the transactions out using a statement class.
 
 ### How to use
 
@@ -25,6 +25,8 @@ You can also call your transaction history in the form of an array using `bank.t
 The statement class enables you to print a given transaction history.   
 
 `Statement.print(bank.transaction_history)`
+
+--------------------
 
 ### Requirements
 
