@@ -2,7 +2,16 @@
 class Statement
   def self.print_transactions(transaction_history)
     transaction_history.each_with_index do |t, i|
-      return "date || credit || debit || balance\n" + t.created_date + ' || ' + t.credit.to_f.to_s + ' || ' + t.debit.to_f.to_s + ' || ' + (transaction_history[0..i].reduce(0) { |initial, t| initial + t.amount }).to_f.to_s
+      string = "date || credit || debit || balance\n"\
+               "#{t.created_date} || #{t.credit} "\
+               "|| #{t.debit} || #{balance(transaction_history, i)}"
+      return string
     end
+  end
+
+  def self.balance(transaction_history, pos)
+    transaction_history[0..pos].reduce(0) do |initial, t|
+      initial + t.amount
+    end.to_s
   end
 end

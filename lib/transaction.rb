@@ -5,14 +5,14 @@ class Transaction
   def initialize(amount, created_date = Time.now)
     @amount = amount
     @created_date = created_date
-    @debit = 0
-    @credit = 0
+    @debit = '0.0'
+    @credit = '0.0'
     assign
   end
 
   private
 
   def assign
-    @amount > 0 ? (@debit = @amount) : (@credit = -@amount)
+    @amount > 0 ? (@debit = @amount.to_f.to_s) : (@credit = -@amount.to_f.to_s)
   end
 end
