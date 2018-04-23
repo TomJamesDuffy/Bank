@@ -11,4 +11,8 @@ class Bank
   def deposit(amount)
     @transaction_history.push(Transaction.new(amount))
   end
+
+  def withdraw(amount)
+    @transaction_history.push(Transaction.new(-amount))
+  end
 end
