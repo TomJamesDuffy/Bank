@@ -3,6 +3,17 @@ This is the first practice tech test set during the tenth week of Makers Academy
 
 ## Specification
 
+### Model
+
+![Program Structure](https://image.ibb.co/cp5xtc/Bank_Tech_Test_Diagram.jpg)
+
+### Setup
+
+Run bundle install
+Run rspec to confirm tests are working
+
+### How to use
+
 ### Requirements
 
 * You should be able to interact with your code via a REPL like IRB or the JavaScript console.  (You don't need to implement a command line interface that takes input from STDIN.)
