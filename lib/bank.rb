@@ -15,10 +15,17 @@ class Bank
 
   def withdraw(amount)
     raise 'Number not entered' unless amount.is_a?(Numeric)
+    raise 'You have no funds' if nil_balance?
     @transaction_history.push(Transaction.new(-amount))
   end
 
   def balance
     @transaction_history.reduce(0) { |initial, t| initial + t.amount }
+  end
+
+  private
+
+  def nil_balance?
+    balance == 0
   end
 end
