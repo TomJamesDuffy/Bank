@@ -10,12 +10,14 @@ class Bank
 
   def deposit(amount)
     raise 'Number not entered' unless amount.is_a?(Numeric)
+    raise 'You cannot deposit a negative amount' if amount < 0
     @transaction_history.push(Transaction.new(amount))
   end
 
   def withdraw(amount)
     raise 'Number not entered' unless amount.is_a?(Numeric)
     raise 'You have no funds' if nil_balance?
+    raise 'You cannot withdraw a negative amount' if amount < 0
     @transaction_history.push(Transaction.new(-amount))
   end
 
@@ -26,6 +28,6 @@ class Bank
   private
 
   def nil_balance?
-    balance == 0
+    balance.zero?
   end
 end

@@ -18,6 +18,10 @@ describe Bank do
       bank.deposit(10)
       expect(bank.balance).to eq(10)
     end
+
+    it 'throws an error if a negative amount is deposited' do
+      expect { bank.deposit(-10) }.to raise_error('You cannot deposit a negative amount')
+    end
   end
 
   describe '#withdraw' do
@@ -35,6 +39,11 @@ describe Bank do
 
     it 'throws an error if a number is not entered' do
       expect { bank.withdraw('potatoes') }.to raise_error('Number not entered')
+    end
+
+    it 'throws an error if a negative amount is deposited' do
+      bank.deposit(10)
+      expect { bank.withdraw(-10) }.to raise_error('You cannot withdraw a negative amount')
     end
   end
 
