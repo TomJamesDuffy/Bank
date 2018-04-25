@@ -1,6 +1,6 @@
 require_relative 'formatter.rb'
 
-# Parses transactions into form that can be interpreted by the print class
+# Parses transactions into form that can be interpreted by the print class i.e a flattened array
 class Parser
   def self.transactions(history)
     history.each_with_index.map do |t, i|
