@@ -1,17 +1,15 @@
-require_relative '../lib/formatter.rb'
-
 describe Formatter do
   subject(:formatter) { Formatter }
-
-  describe '#date' do
-    it 'shows only the date' do
-      expect(Formatter.date(Date.new(2001, 2, 3))).to eq('2001-02-03')
-    end
+  let(:dummy_transaction) do
+    double :transaction,
+           amount: 10,
+           created: Time.new(2008, 10, 10)
   end
 
-  describe '#decimal' do
-    it 'converts a number to a float with two decimal places and then to a string' do
-      expect(Formatter.decimal(10)).to eq('10.00')
+  describe '#transactions' do
+    it 'reformats transactions into appropriate output' do
+      expect(formatter.transactions([dummy_transaction, dummy_transaction]))
+        .to eq(['2008-10-10', nil, '10.00', '10.00', '2008-10-10', nil, '10.00', '20.00'])
     end
   end
 end

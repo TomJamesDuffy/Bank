@@ -18,13 +18,20 @@ The first step I took was to try and frame the problem as a diagram (see above).
 
 ### How to use
 
-The two main classes are the bank class and the statement class.
+The two main classes are the account class and the display class.  
 
-The BankAccount class enables you to `withdraw`, `deposit` and see your `balance`.    
-You can also call your transaction history in the form of an array using `bank.transaction_history`  
-The statement class enables you to print a given transaction history.   
+To create a new account instance create an object in the usual way.  
 
-`Statement.print(bank.transaction_history)`
+`a = Account.new`
+
+To withdraw and deposit into your account   
+
+`a.withdraw(amount)`
+`a.deposit(amount)`
+
+To view your balance, pass your account to the display class as below.  
+
+`Display.statement(a)`
 
 --------------------
 

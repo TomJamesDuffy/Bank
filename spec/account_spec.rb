@@ -1,13 +1,19 @@
-require_relative '../lib/account.rb'
+require_relative '../lib/account'
 
 describe Account do
   subject(:account) { Account.new }
-  let(:dummy_transaction) { double :transaction }
 
-  describe '#transact' do
-    it 'creates a transaction' do
-      account.transact(10)
-      expect(account.transaction_history.length).to eq(1)
+  describe '#withdraw' do
+    it 'pushes a transaction into the history array' do
+      subject.deposit(10)
+      expect(subject.history.length).to eq(1)
+    end
+  end
+
+  describe '#deposit' do
+    it 'pushes a transaction into the history array' do
+      subject.withdraw(10)
+      expect(subject.history.length).to eq(1)
     end
   end
 end

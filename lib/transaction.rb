@@ -1,11 +1,10 @@
-require_relative 'formatter.rb'
-
-# Stores details of individual transactions.
+require_relative 'formatter'
+# records transactions
 class Transaction
-  attr_reader :amount, :created
+  attr_reader :created, :amount
 
-  def initialize(amount)
+  def initialize(amount, created = Formatter.date(Time.now))
     @amount = amount
-    @created = Formatter.date(Time.now)
+    @created = created
   end
 end
